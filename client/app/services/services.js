@@ -4,7 +4,7 @@ angular.module('shortly.services', [])
   return {
     getAll: function() {
       return $http.get('/api/links')
-        .then(function(response) {
+        .then(function(response) {          
           return response.data;
         });
     },

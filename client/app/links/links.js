@@ -1,5 +1,9 @@
 angular.module('shortly.links', [])
 
 .controller('LinksController', function ($scope, Links) {
-//$scope.link = {};
+  $scope.data = {};
+
+  Links.getAll().then(function(links) {
+    $scope.data.links = links;
+  });
 });
